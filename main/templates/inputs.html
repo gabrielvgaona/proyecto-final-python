@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container col-sm-4">
+    <form action=" " method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <br>
+        <div class="text-center">
+            <button class="btn waves-effect waves-light red" type="submit" name="add">a + b</button>
+            <button class="btn waves-effect waves-light red" type="submit" name="sub">a - b</button>
+            <button class="btn waves-effect waves-light red" type="submit " name="mul">a * b</button>
+            <button class="btn waves-effect waves-light red" type="submit" name="div">a / b</button>
+            <button class="btn waves-effect waves-light red" type="submit" name="pot"><var>a<sup>b</sup></var></button>
+            <button class="btn waves-effect waves-light red" type="submit" name="root"><var><sup>b</sup>&#8730;a</var></button>
+        </div>
+    </form>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="&ensp; {{ result }}" id="disabled" type="text" class="validate #bdbdbd grey lighten-1">
+          <label for="disabled">Resultado:</label>
+        </div>
+
+</div>
+{% endblock %}
